@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Röllinger GmbH | Für alles, was Ihr Zuhause braucht.</title>
+    <meta name="description" content="Röllinger GmbH - Wir packen einfach an. Für alles, was Ihr Zuhause braucht. Ihr junges Macher-Team für Hauswartung, Garten und Bau in der Zentralschweiz." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="/logo.jpeg">
+    <link rel="shortcut icon" type="image/jpeg" href="/logo.jpeg">
+    <link rel="apple-touch-icon" href="/logo.jpeg">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://festim-jetishi.github.io/" />
+    <meta property="og:title" content="Röllinger GmbH | Für alles, was Ihr Zuhause braucht." />
+    <meta property="og:description" content="Röllinger GmbH - Wir packen einfach an. Für alles, was Ihr Zuhause braucht. Ihr junges Macher-Team für Hauswartung, Garten und Bau in der Zentralschweiz." />
+    <meta property="og:image" content="https://festim-jetishi.github.io/logo.jpeg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://festim-jetishi.github.io/" />
+    <meta property="twitter:title" content="Röllinger GmbH | Für alles, was Ihr Zuhause braucht." />
+    <meta property="twitter:description" content="Röllinger GmbH - Wir packen einfach an. Für alles, was Ihr Zuhause braucht. Ihr junges Macher-Team für Hauswartung, Garten und Bau in der Zentralschweiz." />
+    <meta property="twitter:image" content="https://festim-jetishi.github.io/logo.jpeg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['DM Sans', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              page: '#FDFCF8', // Warm Bone
+              primary: '#1C1917', // Warm Charcoal
+              secondary: '#57534E', // Stone Grey
+              tertiary: '#A8A29E', // Lighter Stone
+              card: '#F5F5F4', // Light Stone
+              brand: {
+                green: '#8FDA77',
+                dark: '#1C1917', 
+              },
+            },
+            borderRadius: {
+              'soft': '32px',
+              'super': '40px',
+            },
+            transitionDuration: {
+              'slow': '500ms',
+            },
+            transitionTimingFunction: {
+              'organic': 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+            },
+            backgroundImage: {
+              'hero-gradient': 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 40%)',
+            },
+            animation: {
+              'infinite-scroll': 'infinite-scroll 40s linear infinite',
+            },
+            keyframes: {
+              'infinite-scroll': {
+                from: { transform: 'translateX(0)' },
+                to: { transform: 'translateX(-50%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #FDFCF8;
+        color: #1C1917;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      ::selection {
+        background-color: #8FDA77;
+        color: #1C1917;
+      }
+
+      /* Hide Native Scrollbar (replaced by custom one) */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+      
+      html {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+
+      /* Hide Scrollbar for Carousel */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Cursor Styles */
+      .cursor-drag {
+        cursor: grab;
+      }
+      .cursor-drag:active {
+        cursor: grabbing;
+      }
+
+      /* Dot Grid Patterns */
+      .bg-dots-dark {
+        background-image: radial-gradient(circle, rgba(28, 25, 23, 0.15) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+      
+      .bg-dots-light {
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+        background-size: 60px 60px;
+      }
+
+      /* Safari/iOS Performance Optimizations */
+      /* Disable backdrop-blur on mobile for better performance */
+      @media (max-width: 768px) {
+        .backdrop-blur-sm,
+        .backdrop-blur-md,
+        .backdrop-blur-lg {
+          -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
+        }
+      }
+
+      /* GPU acceleration hints for animated elements */
+      .will-change-transform {
+        will-change: transform;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+
+      /* Optimized blur fallback - use solid bg on mobile */
+      @media (max-width: 768px) {
+        .nav-blur-fallback {
+          background-color: rgba(253, 252, 248, 0.98) !important;
+        }
+        .portfolio-blur-fallback {
+          background-color: rgba(253, 252, 248, 0.98) !important;
+        }
+      }
+
+      /* Hero Section - Smaller Laptop Screen Adjustments */
+      /* Height-constrained screens (small laptops, landscape tablets) */
+      @media (max-height: 768px) {
+        .hero-section {
+          min-height: 100vh;
+        }
+        .hero-headline {
+          font-size: clamp(2.5rem, 6vw, 4rem) !important;
+          line-height: 1.2 !important;
+          margin-bottom: 0.75rem !important;
+        }
+        .hero-subtitle {
+          font-size: clamp(1.125rem, 2.5vw, 1.5rem) !important;
+          margin-bottom: 0.75rem !important;
+          margin-top: -0.25rem !important;
+        }
+        .hero-description {
+          font-size: clamp(0.875rem, 2vw, 1rem) !important;
+        }
+        .hero-scroll-cue {
+          bottom: 1rem !important;
+        }
+      }
+
+      /* Very short screens (e.g., landscape mode on smaller devices) */
+      @media (max-height: 600px) {
+        .hero-section {
+          min-height: 100vh;
+        }
+        .hero-headline {
+          font-size: clamp(2rem, 5vw, 3rem) !important;
+          line-height: 1.15 !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .hero-subtitle {
+          font-size: clamp(1rem, 2vw, 1.25rem) !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .hero-description {
+          font-size: 0.875rem !important;
+          max-width: 400px !important;
+        }
+        .hero-scroll-cue {
+          display: none !important;
+        }
+      }
+
+      /* Smaller laptops with both width and height constraints */
+      @media (min-width: 768px) and (max-width: 1024px) and (max-height: 800px) {
+        .hero-headline {
+          font-size: clamp(2.5rem, 5.5vw, 3.5rem) !important;
+          line-height: 1.2 !important;
+        }
+        .hero-subtitle {
+          font-size: clamp(1.125rem, 2.5vw, 1.375rem) !important;
+        }
+        .hero-description {
+          font-size: clamp(0.875rem, 1.8vw, 1rem) !important;
+        }
+      }
+
+      /* ========================================
+         Portfolio Section - Smaller Laptop Screen Adjustments
+         ======================================== */
+      
+      /* Height-constrained screens - increase image visibility */
+      @media (max-height: 768px) {
+        .portfolio-image-height {
+          height: 78vh !important;
+          min-height: 420px !important;
+        }
+      }
+
+      /* Very short screens */
+      @media (max-height: 600px) {
+        .portfolio-image-height {
+          height: 82vh !important;
+          min-height: 380px !important;
+        }
+      }
+
+      /* Smaller laptops (768px-1024px width) - optimize layout */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .portfolio-image-height {
+          height: 70vh !important;
+          min-height: 440px !important;
+        }
+      }
+
+      /* Smaller laptops with both width and height constraints */
+      @media (min-width: 768px) and (max-width: 1024px) and (max-height: 800px) {
+        .portfolio-image-height {
+          height: 78vh !important;
+          min-height: 400px !important;
+        }
+      }
+
+      /* Medium laptops (1024px-1280px) - adjust for lg breakpoint */
+      @media (min-width: 1024px) and (max-width: 1280px) {
+        .portfolio-image-height {
+          height: 76vh !important;
+          min-height: 470px !important;
+        }
+      }
+
+      /* Medium laptops with height constraints */
+      @media (min-width: 1024px) and (max-width: 1280px) and (max-height: 800px) {
+        .portfolio-image-height {
+          height: 82vh !important;
+          min-height: 420px !important;
+        }
+      }
+
+      /* Larger medium laptops (1280px-1440px) - target the 1341x665 scenario */
+      @media (min-width: 1280px) and (max-width: 1440px) {
+        .portfolio-image-height {
+          height: 80vh !important;
+          min-height: 480px !important;
+        }
+      }
+
+      /* Larger medium laptops with height constraints (1280px-1440px, short screens) */
+      @media (min-width: 1280px) and (max-width: 1440px) and (max-height: 768px) {
+        .portfolio-image-height {
+          height: 85vh !important;
+          min-height: 450px !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.1.1",
+    "react-router": "https://aistudiocdn.com/react-router@^7.1.1"
+  }
+}
+</script>
+</head>
+  <body class="overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
