@@ -36,7 +36,7 @@ export const Hero: React.FC = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 md:px-12 h-full flex flex-col justify-end pb-20 md:pb-24 lg:pb-28 xl:pb-32">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 h-full flex flex-col justify-center md:justify-end pb-8 md:pb-24 lg:pb-28 xl:pb-32 pt-20 md:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
