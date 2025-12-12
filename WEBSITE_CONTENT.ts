@@ -89,7 +89,7 @@ export const hero = {
   taglinePart2: "einfach an.",
 
   // Der Slogan unter der Überschrift (kursiv)
-  subtitle: "Für alles, was Ihr Zuhause braucht.",
+  subtitle: "Für alles, was Ihr Zuhause braucht..",
 
   // Die Beschreibung darunter
   description: "",
@@ -831,4 +831,5 @@ export const datenschutz = {
   },
 
 };
+
 
