@@ -154,7 +154,7 @@
 
       /* Hero Section - Smaller Laptop Screen Adjustments */
       /* Height-constrained screens (small laptops, landscape tablets) */
-      @media (max-height: 768px) {
+      @media (min-width: 768px) and (max-height: 768px) {
         .hero-section {
           min-height: 100vh;
         }
@@ -177,7 +177,7 @@
       }
 
       /* Very short screens (e.g., landscape mode on smaller devices) */
-      @media (max-height: 600px) {
+      @media (min-width: 768px) and (max-height: 600px) {
         .hero-section {
           min-height: 100vh;
         }
