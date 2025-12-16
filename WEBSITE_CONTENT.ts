@@ -152,7 +152,7 @@ export const about = {
   //    Löschen Sie den ganzen Block { value: "...", label: "..." },
   statistics: [
     {
-      value: "20+",
+      value: "10+",
       label: "Jahre Erfahrung",
     },
     {
@@ -831,5 +831,6 @@ export const datenschutz = {
   },
 
 };
+
 
 
